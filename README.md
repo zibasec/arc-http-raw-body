@@ -33,6 +33,16 @@ region us-east-1
 
 The values supplied under `@_zibasec/arc-http-raw-body` _must_ have a match under `@http`.
 
+You can access the base64 encoded object via `event.raw`...
+
+```js
+exports.handler = async (event, context) => {
+  // this decodes the b64 into a buffer
+  const rawBodyAsBuffer = (new Buffer(event.raw, 'base64'))
+  return {}
+}
+```
+
 ## What does it do, exactly?
 
 Under the covers this will add an [API Gateway Mapping Template](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-mapping-template-reference.html) to your function and changes its [integration type](https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-lambda-custom-integrations.html) in order to all for the mapping.
