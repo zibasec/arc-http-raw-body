@@ -12,7 +12,7 @@ This is particularly useful when integrating with services that provide signed p
 
 You'll first need to install [`macro-custom-pragma-runner`](https://github.com/zibasec/macro-custom-pragma-runner)
 
-Then use this pragma in your `.arc` file
+Then use this pragma in your `.arc` file. Example...
 
 ```
 @app
