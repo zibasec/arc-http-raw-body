@@ -1,3 +1,13 @@
+Turns out this is not needed. https://arc.codes/primitives/http#req
+
+You can access the raw body like this
+
+```
+module.exports = async http(event, context) {
+  const rawBody = event.body
+}
+```
+
 # arc-http-raw-body
 
 A plugin for [@architect/architect](https://arc.codes) that makes configured endpoints include an unparsed raw request body object as base64.
